@@ -560,6 +560,9 @@
 		AEAA191419DCC5A900194E95 /* NSMethodSignature+Cedar.h in Headers */ = {isa = PBXBuildFile; fileRef = AEAA191119DCC5A900194E95 /* NSMethodSignature+Cedar.h */; };
 		AEAA191619DCC5B100194E95 /* NSInvocation+Cedar.h in Copy headers to framework */ = {isa = PBXBuildFile; fileRef = AEAA191019DCC5A900194E95 /* NSInvocation+Cedar.h */; };
 		AEAA191719DCC5B100194E95 /* NSMethodSignature+Cedar.h in Copy headers to framework */ = {isa = PBXBuildFile; fileRef = AEAA191119DCC5A900194E95 /* NSMethodSignature+Cedar.h */; };
+		AEABEF761B793118002A723E /* ContainSubsetSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEABEF751B793022002A723E /* ContainSubsetSpec.mm */; };
+		AEABEF771B793119002A723E /* ContainSubsetSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEABEF751B793022002A723E /* ContainSubsetSpec.mm */; };
+		AEABEF781B79311A002A723E /* ContainSubsetSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEABEF751B793022002A723E /* ContainSubsetSpec.mm */; };
 		AEB1A74215F304A9002E4167 /* StubbedMethod.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEB1A74115F304A9002E4167 /* StubbedMethod.mm */; };
 		AEB1A74315F304A9002E4167 /* StubbedMethod.mm in Sources */ = {isa = PBXBuildFile; fileRef = AEB1A74115F304A9002E4167 /* StubbedMethod.mm */; };
 		AEB45A911496C8D800845D09 /* RaiseException.h in Headers */ = {isa = PBXBuildFile; fileRef = AEB45A901496C8D800845D09 /* RaiseException.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -1085,6 +1088,7 @@
 		AE8C87AB13624524006C9305 /* ExpectFailureWithMessage.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ExpectFailureWithMessage.mm; sourceTree = "<group>"; };
 		AE8C880E13626FA5006C9305 /* CDRSpecFailure.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRSpecFailure.h; sourceTree = "<group>"; };
 		AE8F1D901850F6C00059E840 /* CedarObservedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CedarObservedObject.h; sourceTree = "<group>"; };
+		AE8F9C141B795A7C00B956C5 /* ContainSubset.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContainSubset.h; sourceTree = "<group>"; };
 		AE94D03E15F341B200A0C2B7 /* AnyInstanceArgument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnyInstanceArgument.h; sourceTree = "<group>"; };
 		AE94D04315F3449500A0C2B7 /* AnyInstanceArgument.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AnyInstanceArgument.mm; sourceTree = "<group>"; };
 		AE9AA67915AB72DA00617E1A /* CDRClassFake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDRClassFake.h; sourceTree = "<group>"; };
@@ -1097,6 +1101,7 @@
 		AE9AA6DD15AE0BE200617E1A /* CedarDoubleImpl.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CedarDoubleImpl.mm; sourceTree = "<group>"; };
 		AEAA191019DCC5A900194E95 /* NSInvocation+Cedar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSInvocation+Cedar.h"; sourceTree = "<group>"; };
 		AEAA191119DCC5A900194E95 /* NSMethodSignature+Cedar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMethodSignature+Cedar.h"; sourceTree = "<group>"; };
+		AEABEF751B793022002A723E /* ContainSubsetSpec.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ContainSubsetSpec.mm; sourceTree = "<group>"; };
 		AEB1A74115F304A9002E4167 /* StubbedMethod.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = StubbedMethod.mm; sourceTree = "<group>"; };
 		AEB45A901496C8D800845D09 /* RaiseException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RaiseException.h; sourceTree = "<group>"; };
 		AEB8818719DCD62D00F081BA /* Cedar OS X Failing Test Bundle.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Cedar OS X Failing Test Bundle.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1741,13 +1746,14 @@
 		AE8C879F1362068A006C9305 /* Matchers */ = {
 			isa = PBXGroup;
 			children = (
-				AE0F354919E7071A00B9F116 /* OSX */,
 				AEF7301313ECC4AE00786282 /* Base */,
 				AEF7302913ECC4C100786282 /* Container */,
-				AEC40C52174AC51800474D2D /* UIKit */,
-				966E74EC145A6CA0002E8D49 /* ShouldSyntaxSpec.mm */,
+				AEABEF751B793022002A723E /* ContainSubsetSpec.mm */,
 				AE8C87AA13624523006C9305 /* ExpectFailureWithMessage.h */,
 				AE8C87AB13624524006C9305 /* ExpectFailureWithMessage.mm */,
+				AE0F354919E7071A00B9F116 /* OSX */,
+				966E74EC145A6CA0002E8D49 /* ShouldSyntaxSpec.mm */,
+				AEC40C52174AC51800474D2D /* UIKit */,
 			);
 			path = Matchers;
 			sourceTree = "<group>";
@@ -2021,6 +2027,7 @@
 				AEF7301013ECC25000786282 /* BeEmpty.h */,
 				AE18A7FA13F4601400C8872C /* Contain.h */,
 				34D1E67A18F7A2E6005161AD /* AnInstanceOf.h */,
+				AE8F9C141B795A7C00B956C5 /* ContainSubset.h */,
 			);
 			path = Container;
 			sourceTree = "<group>";
@@ -2982,6 +2989,7 @@
 				AE1937961B1AC94D008C8CD8 /* RaiseExceptionSpec.mm in Sources */,
 				AE19378B1B1AC94D008C8CD8 /* BeLessThanSpec.mm in Sources */,
 				AE19377B1B1AC3DC008C8CD8 /* FooSuperclass.m in Sources */,
+				AEABEF781B79311A002A723E /* ContainSubsetSpec.mm in Sources */,
 				AE1937861B1AC94D008C8CD8 /* BeCloseToSpec.mm in Sources */,
 				AE1937661B1AC22D008C8CD8 /* CDRExampleSpec.mm in Sources */,
 				AE1937701B1AC3DC008C8CD8 /* ARCViewController.m in Sources */,
@@ -3147,6 +3155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEEE21C411DC290400029872 /* SpecSpec2.m in Sources */,
+				AEABEF761B793118002A723E /* ContainSubsetSpec.mm in Sources */,
 				AEEE21BF11DC290400029872 /* CDRExampleSpec.mm in Sources */,
 				AEEE21BE11DC290400029872 /* CDRExampleGroupSpec.mm in Sources */,
 				AEEE21C111DC290400029872 /* main.mm in Sources */,
@@ -3279,6 +3288,7 @@
 				1F47B9A8186D69CD005A8CE1 /* CDROTestReporterSpec.mm in Sources */,
 				AE53B68117E7BCD300D83D5E /* CedarOrdinaryFakeSharedExamples.mm in Sources */,
 				34D4B5C318F3AE0400FB2C3B /* UIKitContainSpec.mm in Sources */,
+				AEABEF771B793119002A723E /* ContainSubsetSpec.mm in Sources */,
 				9D28051A18E2324200887CC4 /* ObjectWithValueEquality.m in Sources */,
 				AE8C87AF136245BD006C9305 /* ExpectFailureWithMessage.mm in Sources */,
 				96EA1CBB142C6560001A78E0 /* CDRSpecFailureSpec.mm in Sources */,
